@@ -1,0 +1,35 @@
+{
+    "Name": "Desktop Virtualization Tweede Lijns",
+    "IsCustom": true,
+    "Description": "Management access for Management desk Pink Elephant",
+    "Actions": [
+        "Microsoft.DesktopVirtualization/*/read",
+        "Microsoft.DesktopVirtualization/hostpools/sessionhosts/read",
+		
+		  "Microsoft.DesktopVirtualization/*/write",
+		  "Microsoft.DesktopVirtualization/hostpools/sessionhosts/write",
+		  "Microsoft.DesktopVirtualization/hostpools/sessionhosts/usersessions/*",
+		
+		  "Microsoft.DesktopVirtualization/applicationgroups/providers/Microsoft.Insights/logDefinitions/read",
+		  "Microsoft.DesktopVirtualization/applicationgroups/startmenuitems/read",
+		  "Microsoft.DesktopVirtualization/hostpools/providers/Microsoft.Insights/logDefinitions/read",
+		
+		  "Microsoft.Compute/virtualMachines/read",
+		  "Microsoft.Compute/virtualMachines/start/action",
+		  "Microsoft.Compute/virtualMachines/restart/action",
+		
+		  "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/read",
+		  "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/restart/action",
+		  "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/start/action",
+		
+		  "Microsoft.Authorization/permissions/read",
+
+      "Microsoft.Resources/subscriptions/resourceGroups/read"
+    ],
+    "NotActions": [
+  
+    ],
+    "AssignableScopes": [
+      "/subscriptions/<subscriptionID>/resourceGroups/<rgName>"
+    ]
+  }
