@@ -1,5 +1,6 @@
 
-    {
+{
+	{
 		"Name": "Desktop Virtualization Eerste Lijns",
 		"IsCustom": true,
 		"Description": "Management access for Service desk Pink Elephant",
@@ -124,3 +125,4 @@
 		"/subscriptions/<subscriptionID>/resourceGroups/<rgName>"
 		]
  	}
+}
