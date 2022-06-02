@@ -44,11 +44,12 @@ New-AzureADGroup -DisplayName "AVD Eerste lijns PINK" -MailEnabled $false -Secur
 New-AzureADGroup -DisplayName "AVD Tweede lijns PINK" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet" -Description "Security group for AVD Management"
 New-AzureADGroup -DisplayName "AVD Derde lijns PINK" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet" -Description "Security group for AVD Admins"
 
-# Setting object-id variables
+# Setting object variables
 $eerstelijnsid=Get-AzADGroup -DisplayName "AVD Eerste lijns PINK"
 $tweedelijnsid=Get-AzADGroup -DisplayName "AVD Tweede lijns PINK"
 $derdelijnsid=Get-AzADGroup -DisplayName "AVD Derde lijns PINK"
 
+# Grant custom role definitions to the new groups
 New-AzRoleAssignment -ObjectId $eerstelijnsid.id -RoleDefinitionName "Desktop Virtualization Eerste Lijns" -Scope "/subscriptions/$subscriptionID/resourceGroups/$hostpoolRG"
 New-AzRoleAssignment -ObjectId $tweedelijnsid.id -RoleDefinitionName "Desktop Virtualization Tweede Lijns" -Scope "/subscriptions/$subscriptionID/resourceGroups/$hostpoolRG"
 New-AzRoleAssignment -ObjectId $derdelijnsid.id -RoleDefinitionName "Desktop Virtualization Derde Lijns" -Scope "/subscriptions/$subscriptionID/resourceGroups/$hostpoolRG"
