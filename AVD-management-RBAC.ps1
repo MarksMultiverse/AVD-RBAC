@@ -37,6 +37,8 @@ New-AzRoleDefinition -InputFile  .\DesktopVirtualizationTweedeLijns.json
 New-AzRoleDefinition -InputFile  .\DesktopVirtualizationDerdeLijns.json
 
 # Connect to Azure AD
+#Install-Module AzureAD (if necessary)
+#Import-Module AzureAD (if necessary)
 Connect-AzureAD
 
 # Create Azure AD groups
