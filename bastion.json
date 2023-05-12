@@ -24,6 +24,6 @@
     ],
     "notDataActions": []
     "AssignableScopes": [
-     
+      "/subscriptions/<subscriptionID>/resourceGroups/<rgName>"
     ]
   }
