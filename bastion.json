@@ -1,0 +1,29 @@
+{
+    "Name": "Azure Bastion login for 3rd party remote support",
+    "IsCustom": true,
+    "Description": "Temporary Bastion access for suppliers",
+    "Actions": [
+            "Microsoft.Network/bastionHosts/read",
+            "Microsoft.Network/publicIPAddresses/read",
+            "Microsoft.Network/virtualNetworks/read",
+            "Microsoft.Network/loadBalancers/read",
+            "Microsoft.Network/networkInterfaces/read",
+            "Microsoft.Compute/virtualMachines/*/read",
+            "Microsoft.HybridCompute/machines/*/read",
+            "Microsoft.HybridConnectivity/endpoints/listCredentials/action",
+            "Microsoft.KeyVault/vaults/read"
+    ],
+    "NotActions": [
+  
+    ],
+	"dataActions": [
+            "Microsoft.Compute/virtualMachines/login/action",
+            "Microsoft.Compute/virtualMachines/loginAsAdmin/action",
+            "Microsoft.HybridCompute/machines/login/action",
+            "Microsoft.HybridCompute/machines/loginAsAdmin/action"
+    ],
+    "notDataActions": []
+    "AssignableScopes": [
+     
+    ]
+  }
